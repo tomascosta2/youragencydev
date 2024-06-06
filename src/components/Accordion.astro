@@ -1,0 +1,69 @@
+---
+const Preguntas = [
+	{
+		pregunta: "¿Qué servicios ofrecen exactamente?",
+		respuesta: "Ofrecemos servicios de desarrollo web para agencias digitales."
+	},
+	{
+		pregunta: "¿Requieren diseños finalizados al ponerse en contacto?",
+		respuesta: "Sí. Para poder brindar el mejor servicio posible en todos los aspectos."
+	},
+	{
+		pregunta: "¿Cuánto cuesta un proyecto?",
+		respuesta: "La mayoría de nuestros proyectos varían entre $400 y $1000. La tarifa mínima de compromiso es de $350."
+	},
+	{
+		pregunta: "¿Trabajan internacionalmente?",
+		respuesta: "Sí. Estamos ubicados en Argentina, pero trabajamos internacionalmente."
+	},
+	{
+		pregunta: "¿Cuáles son los términos de pago para un proyecto?",
+		respuesta: "50% por adelantado y 50% después del lanzamiento. Esto se puede ajustar según el tamaño del proyecto."
+	}
+]
+---
+
+<div class="tcp-accordion">
+	<div class="w-full">
+		{
+			Preguntas.map((item) => (
+				<div class="tcp-accordion-item cursor-pointer">
+					<h3>{item.pregunta}<svg class="size-[22px] transition-all" fill="#222" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg></h3>
+					<div class="tcp-accordion-item-content max-h-0 overflow-hidden transition-all"><p>{item.respuesta}</p></div>
+				</div>
+			))
+		}
+	</div>
+</div>
+
+<style>
+	/* Accordion */
+	.tcp-accordion {
+		display: flex;
+		column-gap: 25px;
+	}
+	.tcp-accordion-item {
+		width: 100%;
+		position: relative;
+		border-bottom: 1px solid #22222240;
+	}
+	.tcp-accordion-item:last-child {
+		border-bottom: none;
+	}
+	.tcp-accordion-item h3 {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-size: 20px;
+		font-weight: 600;
+		color: #222;
+		padding: 25px 0;
+	}
+	.tcp-accordion-item p {
+		padding-bottom: 25px;
+		color: #222222;
+		opacity: 80%;
+		font-size: 18px;
+		text-align: justify;
+	}
+</style>

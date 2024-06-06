@@ -1,0 +1,91 @@
+---
+const Testimonios = [
+	{
+		texto: "«La dedicación, el orden y el cuidado por los detalles hacen del trabajo de Tomás que sea una excelente opcion para trabajar con nuestra agencia. Realmente un placer»",
+		nombre: "Alexis Mois",
+		empresa: "Abla",
+		urlEmpresa: "abla.com",
+		imagen: "https://media.licdn.com/dms/image/C4D03AQGTakaW-8NJig/profile-displayphoto-shrink_400_400/0/1592878902563?e=1723075200&v=beta&t=rzyt9dq4HYIJhyJY5U9a5WumZ620huzp0K8uhOVrVoE"
+	},
+	{
+		texto: "«La agencia ha superado todas mis expectativas. Su profesionalismo y calidad de trabajo son excepcionales. ¡Los recomendaría sin dudarlo!»",
+		nombre: "Nombre Apellido",
+		empresa: "Empresa",
+		urlEmpresa: "empresa.com"
+	},
+	{
+		texto: "«La agencia ha superado todas mis expectativas. Su profesionalismo y calidad de trabajo son excepcionales. ¡Los recomendaría sin dudarlo!»",
+		nombre: "Nombre Apellido",
+		empresa: "Empresa",
+		urlEmpresa: "empresa.com"
+	}
+]
+---
+
+<div class="swiper">
+	<div class="swiper-wrapper">
+		{
+			Testimonios.map((testimonio) => {
+				return (
+					<div class="swiper-slide py-[20px] lg:py-[40px]">
+						<img class="w-[120px] mb-[20px]" src="/images/five-stars.webp" alt="Stars" />
+						<h5 class="text-[20px]">{testimonio.texto}</h5>
+						<div class="flex gap-[10px] items-center mt-[20px]">
+							<img class="bg-gray-300 size-[50px] rounded-full" src={testimonio.imagen} alt="Persona" />
+							<p class="text-[16px] lg:text-[18px]">{testimonio.nombre} from <a href={testimonio.urlEmpresa} target="_blank">{testimonio.empresa}</a></p>
+						</div>
+					</div>
+				)
+			})
+		}
+	</div>
+</div>
+<div class="relative w-[120px] mt-[20px] lg:mt-[40px] h-[40px] flex justify-start">
+	<div class="swiper-button-next"></div>
+	<div class="swiper-button-prev"></div>
+</div>
+
+<style>
+	/* Swiper */
+	div.swiper-button-prev,
+	div.swiper-button-next {
+		min-width: 40px;
+		height: 40px;
+		border: 2px solid #222 !important;
+		border-radius: 100px;
+	}
+	div.swiper-button-prev::after,
+	div.swiper-button-next::after {
+		font-size: 14px !important;
+		font-weight: 900;
+		color: #222;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+</style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script is:inline>
+	// new Swiper('.swiper')
+	new Swiper(".swiper", {
+      slidesPerView: 2.5,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+	  breakpoints: {
+		0: {
+      		slidesPerView: 1,
+		},
+		568: {
+      		slidesPerView: 1.5,
+		},
+		992: {
+      		slidesPerView: 2.5,
+		}
+	  }
+    });
+</script>

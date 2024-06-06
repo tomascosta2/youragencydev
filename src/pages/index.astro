@@ -21,7 +21,7 @@ import Accordion from '../components/Accordion.astro';
 	<main>
 		<section class="group max-w-[1200px] mx-auto pt-[100px] pb-[100px] xl:px-0 px-4 flex flex-col lg:flex-row justify-between items-center">			
 			<div class="max-w-[650px] mx-auto">
-				<h1 class="mx-auto text-[36px] lg:text-[48px] font-[700] text-[#161616] leading-[130%] mb-[20px] text-center">Desarrollamos sitios de calidad para tu <span class="terciary-text-gradient">agencia digital</span></h1>
+				<h1 class="mx-auto text-[36px] lg:text-[48px] font-[700] text-[#161616] leading-[130%] mb-[20px] text-center">Desarrollamos sitios extraordinarios para tu <span class="terciary-text-gradient">agencia digital</span></h1>
 				<p class="text-[16px] lg:text-[18px] text-[#222]/80 text-center">
 					Si tu agencia enfrenta dificultades para encontrar desarrolladores web de calidad... ¡tenemos la solución que necesitas!
 				</p>
@@ -161,7 +161,7 @@ import Accordion from '../components/Accordion.astro';
 		</section>
 	</main>
 	<footer class="py-[40px]">
-		<p class="text-gray-500 text-center">tomascostapp@gmail.com</p>
+		<p class="text-gray-500 text-center">hi@youragencydev.com</p>
 	</footer>
 </Layout>
 
@@ -190,6 +190,14 @@ import Accordion from '../components/Accordion.astro';
 		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
+		background-size: 180%;
+		background-position: left bottom;
+		animation: gradiantAnimation 4s infinite alternate;
+	}
+	@keyframes gradiantAnimation {
+		to {
+			background-position: right top;
+		}
 	}
 	.hide-scroll {
 		-ms-overflow-style: none;  /* Internet Explorer 10+ */
@@ -285,5 +293,5 @@ import Accordion from '../components/Accordion.astro';
 
 <script>window.onload=()=>{const e=document.querySelectorAll(".tcp-accordion-item");let t=null;e.forEach((e=>{e.addEventListener("click",(()=>{t&&t!==e&&(t.querySelector(".tcp-accordion-item-content").classList.add("max-h-0"),t.querySelector(".tcp-accordion-item-content").classList.remove("max-h-[500px]"),t.querySelector("svg").classList.toggle("rotate-[45deg]")),e.querySelector("svg").classList.toggle("rotate-[45deg]");const c=e.querySelector(".tcp-accordion-item-content");c.classList.toggle("max-h-0"),c.classList.toggle("max-h-[500px]"),t=c.classList.contains("max-h-0")?null:e}))}));const c=document.querySelectorAll(".--animate"),o=new IntersectionObserver(((e,t)=>{e.forEach((e=>{e.isIntersecting?e.target.classList.add("--animated"):e.target.classList.remove("--animated")}))}),{threshold:.1});c.forEach((e=>{o.observe(e)}))};</script>
 
-<!-- <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script> -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>

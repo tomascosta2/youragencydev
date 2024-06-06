@@ -4,13 +4,13 @@ const Testimonios = [
 		texto: "«La dedicación, el orden y el cuidado por los detalles hacen del trabajo de Tomás que sea una excelente opcion para trabajar con nuestra agencia. Realmente un placer»",
 		nombre: "Alexis Mois",
 		empresa: "Abla",
-		urlEmpresa: "abla.com",
+		urlEmpresa: "https://disenoweb.abla.cl/",
 		imagen: "https://media.licdn.com/dms/image/C4D03AQGTakaW-8NJig/profile-displayphoto-shrink_400_400/0/1592878902563?e=1723075200&v=beta&t=rzyt9dq4HYIJhyJY5U9a5WumZ620huzp0K8uhOVrVoE"
 	},
 	{
 		texto: "«La agencia ha superado todas mis expectativas. Su profesionalismo y calidad de trabajo son excepcionales. ¡Los recomendaría sin dudarlo!»",
 		nombre: "Gabriel Peralta",
-		empresa: "Empresa",
+		empresa: "YourPresence",
 		urlEmpresa: "empresa.com",
 		imagen: "/"
 	},
@@ -34,7 +34,7 @@ const Testimonios = [
 						<h5 class="text-[20px]">{testimonio.texto}</h5>
 						<div class="flex gap-[10px] items-center mt-[20px]">
 							<img class="bg-gray-300 size-[50px] rounded-full" src={testimonio.imagen} alt="Persona" />
-							<p class="text-[16px] lg:text-[18px]">{testimonio.nombre} from <a href={testimonio.urlEmpresa} target="_blank">{testimonio.empresa}</a></p>
+							<p class="text-[16px] lg:text-[18px]">{testimonio.nombre} de <a class="underline" href={testimonio.urlEmpresa} target="_blank">{testimonio.empresa}</a></p>
 						</div>
 					</div>
 				)

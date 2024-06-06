@@ -36,6 +36,7 @@ import Accordion from '../components/Accordion.astro';
 			<!-- <img class="rounded-[10px] w-[650px] max-w-full lg:mt-0 mt-[40px]" src="/public/images/hero-image.webp" alt="YourAgencyDev Codigo"> -->
 		</section>
 		<section class="relative py-[60px] bg-[#151718] overflow-hidden" id="nosotros">
+			<div id="follower"></div>
 			<div class="max-w-[1200px] mx-auto xl:px-0 px-4">
 				<div class="absolute inset-[30%] bg-fuchsia-400 bg-[size:20px_20px] opacity-15 blur-[100px]"></div>
 				<h2 class="mx-auto text-center text-[40px] lg:text-[60px] font-[700] text-[#F5F5F5] leading-[120%] mb-[20px]"><span class="text-[#F5F5F5]/60">Hacemos tu trabajo</span> <span class="terciary-text-gradient">más simple</span></h2>
@@ -223,6 +224,18 @@ import Accordion from '../components/Accordion.astro';
 		@apply bg-gray-200 text-[#222] border-transparent hover:border-[#6248ff];
 	}
 
+	/* Cursor follower */
+	#follower {
+		width: 20px;
+		height: 20px;
+		background-color: #FFFFFF;
+		border-radius: 50%;
+		position: absolute;
+		pointer-events: none;
+		transition: transform 0.1s ease;
+		filter: blur(40px);
+	}
+
 	/* Hero */
 	.hero-development {
 		opacity: 1;
@@ -315,4 +328,16 @@ import Accordion from '../components/Accordion.astro';
 	closeContact.addEventListener('click', () => {
 		contactScreen.classList.add('hidden');
 	})
+
+	// Cursor follower
+	const section = document.getElementById('nosotros');
+	const follower = document.getElementById('follower');
+
+	section.addEventListener('mousemove', (event) => {
+		const rect = section.getBoundingClientRect();
+		const x = event.clientX - rect.left;
+		const y = event.clientY - rect.top - 60;
+
+		follower.style.transform = `translate(${x}px, ${y}px)`;
+	});
 </script>

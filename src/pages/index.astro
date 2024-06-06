@@ -4,16 +4,16 @@ import '@fontsource-variable/onest';
 import '@fontsource-variable/roboto-mono';
 import Slider from '../components/Slider.astro';
 import Accordion from '../components/Accordion.astro';
+import Icon from '../components/Icon.astro';
 ---
 
 <Layout title="Welcome to YourAgencyDev.">
 	<header class="max-w-[1200px] mx-auto py-4 border-b-[1px] border-[#222222]/30">
 		<div class="xl:px-0 px-4 flex justify-between items-center">
 			<h2 class="flex items-center gap-[4px] font-[700] text-[16px] lg:text-[18px] text-[#222]">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
-					<path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
-				</svg>				  
-				YourAgencyDev</h2>
+				<Icon/>
+				YourAgencyDev
+			</h2>
 			<nav class="hidden lg:flex items-center gap-[4px]">
 				<a class="px-[24px] py-[8px] text-[#222]/80 hover:text-[#222] transition-all" href="#nosotros">Nosotros</a>
 				<a class="px-[24px] py-[8px] text-[#222]/80 hover:text-[#222] transition-all" href="#clientes">Clientes</a>
@@ -27,7 +27,7 @@ import Accordion from '../components/Accordion.astro';
 			<div class="max-w-[650px] mx-auto">
 				<h1 class="mx-auto text-[36px] lg:text-[48px] font-[700] text-[#161616] leading-[120%] mb-[20px] text-center">Desarrollamos sitios extraordinarios para tu <span class="terciary-text-gradient">agencia digital</span></h1>
 				<p class="text-[16px] lg:text-[18px] text-[#222]/80 text-center">
-					Si tu agencia enfrenta dificultades para encontrar desarrolladores web de calidad... ¡tenemos la solución que necesitas!
+					Si tu agencia enfrenta dificultades para encontrar desarrolladores web de calidad... ¡tenemos la solución que necesitas! Concentrate en el diseño y nosotros nos aseguramos de que el desarrollo sea perfecto
 				</p>
 				<div class="flex justify-center lg:justify-center items-center flex-col lg:flex-row gap-[10px] mt-[26px]">
 					<a class="tcp-btn --secondary" href="#nosotros">Más información</a>
@@ -58,7 +58,7 @@ import Accordion from '../components/Accordion.astro';
 						</div>
 						<div class="relative card custom-cursor-target">
 							<div class="relative z-20 bg-[#151718] p-[30px] rounded-[10px] h-full">
-								<h3 class="text-3xl lg:text-4xl font-semibold text-[#F5F5F5] text-center">3 años</h3>
+								<h3 class="text-3xl lg:text-4xl font-semibold text-[#F5F5F5] text-center">6 años</h3>
 								<p class="text-center text-[#F5F5F5]/50 mt-[10px]">De experiencia</p>
 							</div>
 							<div class="absolute -top-[1px] -bottom-[1px] -left-[1px] -right-[1px] card-bg rounded-[11px] z-10"></div>

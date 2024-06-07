@@ -10,7 +10,7 @@ import Icon from '../components/Icon.astro';
 <Layout title="Welcome to YourAgencyDev.">
 	<header class="max-w-[1200px] mx-auto py-4 border-b-[1px] border-[#222222]/30">
 		<div class="xl:px-0 px-4 flex justify-between items-center">
-			<h2 class="flex items-center gap-[4px] font-[700] text-[16px] lg:text-[18px] text-[#222]">
+			<h2 class="flex items-center gap-[6px] font-[700] text-[16px] lg:text-[18px] text-[#222]">
 				<Icon/>
 				YourAgencyDev
 			</h2>
@@ -36,14 +36,14 @@ import Icon from '../components/Icon.astro';
 			</div>
 			<!-- <img class="rounded-[10px] w-[650px] max-w-full lg:mt-0 mt-[40px]" src="/public/images/hero-image.webp" alt="YourAgencyDev Codigo"> -->
 		</section>
-		<section class="relative py-[60px] bg-[#151718] overflow-hidden" id="nosotros">
+		<section class="relative py-[80px] bg-[#151718] overflow-hidden" id="nosotros">
 			<div id="follower"></div>
 			<div class="max-w-[1200px] mx-auto xl:px-0 px-4">
 				<div class="absolute inset-[30%] bg-fuchsia-400 bg-[size:20px_20px] opacity-15 blur-[100px]"></div>
 				<h2 class="mx-auto text-center text-[38px] lg:text-[60px] font-[700] text-[#F5F5F5] leading-[120%] mb-[20px]"><span class="text-[#F5F5F5]/60">Hacemos tu trabajo</span> <span class="terciary-text-gradient">más simple</span></h2>
 				<!-- <p class="text-[18px] text-[#F5F5F5]/80 max-w-[900px] mx-auto text-center">Finding the correct web developer for your agency can be a... thats why we focus on giving our clients the best service</p> -->
 				<!-- Main grid -->
-				<div class="grid lg:grid-cols-2 gap-[10px] my-[60px]">
+				<div class="grid lg:grid-cols-2 gap-[10px] mt-[60px]">
 					<!-- Sub grid -->
 					<div class="grid grid-cols-2 gap-[10px]">
 						<div class="relative card custom-cursor-target">
@@ -148,16 +148,16 @@ import Icon from '../components/Icon.astro';
 			</div>
 		</section>
 		<section class="max-w-[1200px] mx-auto xl:px-0 px-4 py-[80px]" id="clientes">
-			<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-[20px] group">
+			<!-- <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-[20px] group">
 				<div>
 					<h2 class="text-[36px] lg:text-[48px] font-bold text-[#222] leading-[100%] mb-[10px]">Saluda a <span class="terciary-text-gradient">nuestros clientes!</span></h2>
 					<p class="text-[18px] text-[#222]/80">Y escucha lo que tienen para decir...</p>
 				</div>
 				<div class="hidden lg:block">
 					<h3 class="text-[24px] font-semibold mb-[20px] lg:text-end">Trabajemos juntos en sitios maravillosos!</h3>
-					<a class="tcp-btn text-[14px] ms-auto" id="openContact">Agenda una llamada</a>
+					<a class="tcp-btn ms-auto" id="openContact">Agenda una llamada</a>
 				</div>
-			</div>
+			</div> -->
 			<Slider />
 		</section>		
 		<section class="max-w-[900px] mx-auto xl:px-0 px-4 pb-[40px]" id="faqs">
@@ -219,7 +219,7 @@ import Icon from '../components/Icon.astro';
 		display: none;  /* Safari and Chrome */
 	}
 	.tcp-btn {
-		@apply block w-fit bg-[#222] px-[24px] py-[8px] text-[#F5F5F5] rounded-[10px] font-semibold border-[3px] border-[#222] hover:border-[#6248ff] transition-all duration-[.2s] hover:cursor-pointer;
+		@apply block w-fit bg-[#222] px-[24px] py-[8px] text-[#F5F5F5] rounded-[10px] font-semibold border-[3px] border-[#222] hover:border-[#6248ff] transition-all duration-[.2s] hover:cursor-pointer lg:text-[16px];
 	}
 	.tcp-btn.--secondary {
 		@apply bg-gray-200 text-[#222] border-transparent hover:border-[#6248ff];

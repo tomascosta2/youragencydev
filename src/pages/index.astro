@@ -4,6 +4,7 @@ import '@fontsource-variable/onest';
 import '@fontsource-variable/roboto-mono';
 import Slider from '../components/Slider.astro';
 import Accordion from '../components/Accordion.astro';
+import Servicios from '../components/Servicios.astro';
 import Icon from '../components/Icon.astro';
 ---
 
@@ -23,9 +24,9 @@ import Icon from '../components/Icon.astro';
 		</div>
 	</header>
 	<main>
-		<section class="group max-w-[1200px] mx-auto pt-[100px] pb-[100px] xl:px-0 px-4 flex flex-col lg:flex-row justify-between items-center">			
+		<section class="group max-w-[1200px] mx-auto py-[100px] xl:px-0 px-4 flex flex-col lg:flex-row justify-between items-center">			
 			<div class="max-w-[650px] mx-auto">
-				<h1 class="mx-auto text-[36px] lg:text-[50px] font-[700] text-[#161616] leading-[120%] mb-[20px] text-center">Desarrollamos sitios extraordinarios para tu <span class="terciary-text-gradient">agencia digital</span></h1>
+				<h1 class="mx-auto text-[36px] lg:text-[54px] font-[700] text-[#161616] leading-[120%] mb-[20px] text-center">Desarrollamos sitios extraordinarios para tu <span class="terciary-text-gradient">agencia digital</span></h1>
 				<p class="text-[16px] lg:text-[18px] text-[#222]/80 text-center">
 					Concentrate en el diseño y nosotros nos aseguramos de que el desarrollo sea perfecto. ¡Contactanos ahora!
 				</p>
@@ -36,7 +37,7 @@ import Icon from '../components/Icon.astro';
 			</div>
 			<!-- <img class="rounded-[10px] w-[650px] max-w-full lg:mt-0 mt-[40px]" src="/public/images/hero-image.webp" alt="YourAgencyDev Codigo"> -->
 		</section>
-		<section class="relative py-[80px] bg-[#151718] overflow-hidden have-mouse-follower" id="nosotros">
+		<section class="relative py-[100px] bg-[#151718] overflow-hidden have-mouse-follower" id="nosotros">
 			<div id="follower"></div>
 			<div class="max-w-[1200px] mx-auto xl:px-0 px-4">
 				<!-- <div class="absolute inset-[30%] bg-fuchsia-400 bg-[size:20px_20px] opacity-15 blur-[100px]"></div> -->
@@ -148,20 +149,14 @@ import Icon from '../components/Icon.astro';
 				</div>
 			</div>
 		</section>
-		<section class="max-w-[1200px] mx-auto xl:px-0 px-4 py-[80px]" id="clientes">
-			<!-- <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-[20px] group">
-				<div>
-					<h2 class="text-[36px] lg:text-[48px] font-bold text-[#222] leading-[100%] mb-[10px]">Saluda a <span class="terciary-text-gradient">nuestros clientes!</span></h2>
-					<p class="text-[18px] text-[#222]/80">Y escucha lo que tienen para decir...</p>
-				</div>
-				<div class="hidden lg:block">
-					<h3 class="text-[24px] font-semibold mb-[20px] lg:text-end">Trabajemos juntos en sitios maravillosos!</h3>
-					<a class="tcp-btn ms-auto" id="openContact">Agenda una llamada</a>
-				</div>
-			</div> -->
+		<section class="max-w-[1200px] mx-auto xl:px-0 px-4 py-[100px]" id="clientes">
 			<Slider />
 		</section>		
-		<section class="group relative xl:px-0 px-4 py-[80px] bg-[#151718] have-mouse-follower">
+		<section class="max-w-[1200px] mx-auto xl:px-0 px-4 pb-[100px]" id="clientes">			
+			<h2 class="text-center text-[36px] lg:text-[48px] font-bold text-[#222] leading-[100%] mb-[10px]">Nuestros <span class="terciary-text-gradient">servicios</span></h2>
+			<Servicios />
+		</section>		
+		<section class="group relative xl:px-0 px-4 py-[100px] bg-[#151718] have-mouse-follower">
 			<div id="follower"></div>
 			<div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
 			<div class="relative max-w-[600px] mx-auto">
@@ -170,7 +165,7 @@ import Icon from '../components/Icon.astro';
 			</div>
 		</section>
 		<section class="max-w-[900px] mx-auto xl:px-0 px-4 pt-[80px] pb-[40px]" id="faqs">
-			<h2 class="text-[40px] lg:text-[60px] text-center font-bold text-[#222] leading-[100%] mb-[40px]">Preguntas frecuentes</h2>
+			<h2 class="text-[40px] lg:text-[60px] text-center font-bold text-[#222] leading-[100%] mb-[60px]">Preguntas frecuentes</h2>
 			<Accordion />
 		</section>
 	</main>

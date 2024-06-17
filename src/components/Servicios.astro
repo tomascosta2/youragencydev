@@ -3,7 +3,7 @@ const SERVICIOS = [
 	{
 		icono: "ruta a icono",
 		titulo: "Sitios Web Corporativos",
-		desc: "desc..."
+		desc: "Desarrollo a medida de sitios web corporativos autoadministrables y no autoadministrables. Entre 2 a 6 semanas de desarrollo."
 	},
 	{
 		icono: "ruta a icono",
@@ -13,12 +13,12 @@ const SERVICIOS = [
 	{
 		icono: "ruta a icono",
 		titulo: "Aplicaciones web a medida",
-		desc: "desc..."
+		desc: "Aplicaciones/Sistemas web a medida de todo tipo. Entre 4 y 16 semanas de desarrollo."
 	},
 	{
 		icono: "ruta a icono",
 		titulo: "Landing Pages",
-		desc: "desc..."
+		desc: "Desarrollo de Landing Pages rapidas y seguras."
 	},
 	{
 		icono: "ruta a icono",
@@ -33,9 +33,9 @@ const SERVICIOS = [
 		SERVICIOS.map((servicio) => (
 			<div class="service-card relative min-w-[300px] w-[calc(33%-10px)]">
 				<div class="service-card-bg bg-[#151718] absolute -top-[2px] -bottom-[6px] -right-[2px] -left-[2px] rounded-[11px]"></div>
-				<div class="relative bg-[#F5F5F5] p-[24px] rounded-[10px]">
+				<div class="relative bg-[#F5F5F5] p-[24px] rounded-[10px] h-full">
 					<h3 class="text-[24px] mb-[10px]">{servicio.titulo}</h3>
-					<p class="text-[18px]">{servicio.desc}</p>
+					<p class="text-[18px] text-[#222]/80">{servicio.desc}</p>
 				</div>
 			</div>
 		))

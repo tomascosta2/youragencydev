@@ -500,10 +500,10 @@ import Icon from "../components/Icon.astro";
 		display: none; /* Safari and Chrome */
 	}
 	.tcp-btn {
-		@apply block w-fit bg-[#222] px-[24px] py-[8px] text-[#F5F5F5] rounded-[10px] font-semibold border-[3px] border-[#222] hover:border-[#6248ff] transition-all duration-[.2s] hover:cursor-pointer lg:text-[16px];
+		@apply block w-fit bg-[#222] px-[24px] py-[8px] text-[#F5F5F5] rounded-[10px] font-semibold border-[3px] border-[#222] hover:bg-[#111] transition-all duration-[.2s] hover:cursor-pointer lg:text-[16px];
 	}
 	.tcp-btn.--secondary {
-		@apply bg-gray-200 text-[#222] border-transparent hover:border-[#6248ff];
+		@apply bg-gray-200 text-[#222] border-transparent hover:bg-gray-300;
 	}
 
 	/* Cursor follower */
@@ -704,7 +704,7 @@ import Icon from "../components/Icon.astro";
 					zIndex: 39
 				});
 			} else {
-				y = y - 40;
+				y = y - 10;
 				confetti({
 					particleCount: 50,
 					spread: 50,
@@ -714,7 +714,8 @@ import Icon from "../components/Icon.astro";
 					},
 					angle: -90,
 					disableForReducedMotion: true,
-					zIndex: 39
+					zIndex: 39,
+					startVelocity: 30
 				});
 			}
 		});

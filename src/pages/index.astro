@@ -40,9 +40,9 @@ import Icon from "../components/Icon.astro";
 		<section
 			class="group max-w-[1200px] mx-auto py-[100px] xl:px-0 px-4 flex flex-col lg:flex-row justify-between items-center"
 		>
-			<div class="max-w-[650px] mx-auto">
+			<div class="max-w-[680px] mx-auto">
 				<h1
-					class="mx-auto text-[36px] lg:text-[54px] font-[700] text-[#161616] leading-[120%] mb-[20px] text-center"
+					class="mx-auto text-[36px] lg:text-[60px] font-[700] text-[#161616] leading-[110%] mb-[20px] text-center"
 				>
 					Desarrollamos sitios extraordinarios para tu <span
 						class="terciary-text-gradient">agencia digital</span
@@ -657,7 +657,7 @@ import Icon from "../components/Icon.astro";
 
 	openContactButtons.forEach((openContactButton) => {
 		openContactButton.addEventListener("click", () => {
-			setTimeout(() => contactScreen.classList.remove("hidden"), 2000)
+			setTimeout(() => contactScreen.classList.remove("hidden"), 1500)
 		});
 	});
 	closeContact.addEventListener("click", () => {
@@ -687,9 +687,6 @@ import Icon from "../components/Icon.astro";
 			const rect = btn.getBoundingClientRect();
 			let x = rect.left + rect.width / 2;
 			let y = rect.top + rect.height / 2;
-
-			console.log(btn.classList)
-			console.log(btn.classList.contains('--confetti-d'))
 
 			if (!btn.classList.contains('--confetti-d')) {
 				confetti({

@@ -1,0 +1,142 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Icon from "../components/Icon.astro";
+---
+
+<Layout title="YourAgencyDev ~ Landing page 100% GRATIS">
+	<header
+		class="max-w-[1200px] mx-auto py-4 border-b-[1px] border-[#222222]/30"
+	>
+		<div class="xl:px-0 px-4 flex justify-between items-center">
+			<h2 class="">
+				<a
+					target="_blank"
+					href="/"
+					class="flex items-center gap-[6px] font-[700] text-[16px] lg:text-[18px] text-[#222]"
+				>
+					<Icon />
+					YourAgencyDev
+				</a>
+			</h2>
+		</div>
+	</header>
+	<section class="max-w-[1200px] mx-auto pt-[30px]">
+		<h1 class="text-[32px] font-bold text-center">
+			YourAgencyDev es una agencia lider en el sector del desarrollo web y
+			esta ofreciendo una Landing Page GRATIS para agencias digitales <span
+				class="underline">solo por HOY!</span
+			>
+		</h1>
+		<div>
+			<div class="flex items-center">
+				<img
+					class="w-[500px] mx-auto mt-[40px] mb-[50px]"
+					src="/images/performance.png"
+					alt="YourAgencyDev - Sitios de alto rendimiento"
+				/>
+				<div class="">
+					<h3 class="text-[24px] font-bold mb-[14px]">Que incluye?</h3>
+					<ul class="text-[18px]">
+						<li>📄 Hasta 10 secciones.</li>
+						<li>📬 Formulario de contacto.</li>
+						<li>🎨 Animaciones según el diseño.</li>
+						<li>🏆 Los mejores resultados en las pruebas de Google.</li>
+						<li>🚀 Optimizada para SEO.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="flex items-center justify-center flex-col">
+				<p class="text-[18px] text-[#000]/60 text-center mb-[10px]">
+					Si! Quiero una landing gratis!
+				</p>
+				<a
+					class="tcp-btn mx-auto scale-[103%] hover:scale-[106%] cursor-pointer"
+					id="openContact">Obtene tu landing GRATIS ahora!</a
+				>
+			</div>
+		</div>
+	</section>
+
+	<div
+		class="hidden fixed z-40 top-0 left-0 w-full h-full bg-[#222222]/40 backdrop-blur-[2px]"
+		id="contactScreen"
+	>
+		<svg
+			id="closeContact"
+			class="absolute z-50 top-[20px] right-[20px] size-[24px] rotate-45 cursor-pointer"
+			fill="#666"
+			viewBox="0 0 448 512"
+			><path
+				d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+			></path></svg
+		>
+		<!-- Calendly inline widget begin -->
+		<div
+			class="calendly-inline-widget"
+			data-url="https://calendly.com/tomascostapp/30min"
+			style="min-width:320px;height:700px;"
+		>
+		</div>
+		<script
+			type="text/javascript"
+			src="https://assets.calendly.com/assets/external/widget.js"
+			async></script>
+		<!-- Calendly inline widget end -->
+	</div>
+</Layout>
+
+<script
+	src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"
+></script>
+<script>
+	const contactScreen = document.getElementById("contactScreen");
+	const openContactButtons = document.querySelectorAll("#openContact");
+	const closeContact = document.getElementById("closeContact");
+
+	openContactButtons.forEach((openContactButton) => {
+		openContactButton.addEventListener("click", () => {
+			setTimeout(() => contactScreen.classList.remove("hidden"), 1500);
+		});
+	});
+	closeContact.addEventListener("click", () => {
+		contactScreen.classList.add("hidden");
+	});
+
+	// Confetti buttons
+	const confettiButtons = document.querySelectorAll("#openContact");
+	[...confettiButtons].map((btn) => {
+		btn.addEventListener("click", () => {
+			const rect = btn.getBoundingClientRect();
+			let x = rect.left + rect.width / 2;
+			let y = rect.top + rect.height / 2;
+
+			if (!btn.classList.contains("--confetti-d")) {
+				confetti({
+					// muestra error pero no proboca ningun error en el sitio (relacionado a typescript)
+					particleCount: 50,
+					spread: 50,
+					origin: {
+						x: x / window.innerWidth,
+						y: y / window.innerHeight,
+					},
+					disableForReducedMotion: true,
+					zIndex: 39,
+				});
+			} else {
+				y = y - 10;
+				confetti({
+					particleCount: 50,
+					spread: 50,
+					origin: {
+						x: x / window.innerWidth,
+						y: y / window.innerHeight,
+					},
+					angle: -90,
+					disableForReducedMotion: true,
+					zIndex: 39,
+					startVelocity: 30,
+				});
+			}
+		});
+	});
+</script>

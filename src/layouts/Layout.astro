@@ -7,7 +7,10 @@ import "@fontsource-variable/onest";
 <html lang="en" class="bg-gray-100">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Desarrollo web de calidad para agencias digitales" />
+		<meta
+			name="description"
+			content="Desarrollo web de calidad para agencias digitales"
+		/>
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link
@@ -17,13 +20,18 @@ import "@fontsource-variable/onest";
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-JJJKWCJS1W"></script>
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-JJJKWCJS1W"
+		></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
 
-			gtag('config', 'G-JJJKWCJS1W');
+			gtag("config", "G-JJJKWCJS1W");
 		</script>
 	</head>
 	<body>
@@ -33,7 +41,7 @@ import "@fontsource-variable/onest";
 
 <style is:global>
 	* {
-		font-family: 'Onest Variable', sans-serif;
+		font-family: "Onest Variable", sans-serif;
 	}
 
 	/* Basics */
@@ -105,6 +113,40 @@ import "@fontsource-variable/onest";
 	}
 	.hero-development:hover {
 		opacity: 100 !important;
+	}
+
+	/* Animaciones */
+	@keyframes slideUp {
+		from {
+			opacity: 0;
+			transform: translateY(40px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.animate-slideUp {
+		animation: slideUp 0.5s ease-out forwards;
+	}
+	h1.animate-slideUp {
+		animation: slideUp 0.5s ease-out forwards;
+	}
+	.animate-slideUp {
+		opacity: 0;
+	}
+	.hero-text {
+		animation: slideUp 0.8s ease-out forwards;
+		animation-delay: .3s;
+	}
+	.hero-comment.animate-slideUp {
+		animation: slideUp 0.8s ease-out forwards;
+		animation-delay: .5s;
+	}
+	.hero-buttons.animate-slideUp {
+		animation: slideUp 0.8s ease-out forwards;
+		animation-delay: .8s;
 	}
 
 	/* Nosotros */

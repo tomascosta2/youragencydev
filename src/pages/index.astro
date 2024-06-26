@@ -31,7 +31,9 @@ import Icon from "../components/Icon.astro";
 					class="px-[24px] py-[8px] text-[#222]/60 hover:text-[#222] transition-all"
 					href="#faqs">FAQs</a
 				>
-				<a class="tcp-btn --confetti-d" id="openContact">Agenda una llamada</a>
+				<a class="tcp-btn --confetti-d" id="openContact"
+					>Agenda una llamada</a
+				>
 			</nav>
 		</div>
 	</header>
@@ -40,11 +42,23 @@ import Icon from "../components/Icon.astro";
 			class="group max-w-[1200px] mx-auto py-[100px] xl:px-0 px-4 flex flex-col lg:flex-row justify-between items-center"
 		>
 			<div class="max-w-[680px] mx-auto relative">
-				<div class="hero-comment absolute -left-[210px] animate-slideUp hidden lg:block">
-					<img class="max-h-[82px]" src="/images/comentario-hero-1.png" alt="Comentario de Alexis de Abla">
+				<div
+					class="hero-comment absolute -left-[210px] animate-slideUp hidden lg:block"
+				>
+					<img
+						class="max-h-[82px]"
+						src="/images/comentario-hero-1.png"
+						alt="Comentario de Alexis de Abla"
+					/>
 				</div>
-				<div class="hero-comment absolute -right-[195px] -top-[66px] animate-slideUp hidden lg:block">
-					<img class="max-h-[82px]" src="/images/comentario-hero-2.png" alt="Comentario de Alexis de Abla">
+				<div
+					class="hero-comment absolute -right-[195px] -top-[66px] animate-slideUp hidden lg:block"
+				>
+					<img
+						class="max-h-[82px]"
+						src="/images/comentario-hero-2.png"
+						alt="Comentario de Alexis de Abla"
+					/>
 				</div>
 				<h1
 					class="mx-auto text-[36px] lg:text-[60px] font-[700] text-[#161616] leading-[110%] mb-[20px] text-center animate-slideUp"
@@ -56,8 +70,9 @@ import Icon from "../components/Icon.astro";
 				<p
 					class="text-[16px] lg:text-[18px] text-[#222]/80 text-center hero-text animate-slideUp"
 				>
+					¿Te cansaste de manejar a un equipo de desarrolladores?
 					Concentrate en el diseño y nosotros nos aseguramos de que el
-					desarrollo sea perfecto. <strong>- dolores de cabeza + clientes felices</strong>
+					desarrollo sea perfecto.
 				</p>
 				<div
 					class="flex justify-center lg:justify-center items-center flex-col lg:flex-row gap-[10px] mt-[26px] hero-buttons animate-slideUp"
@@ -87,9 +102,10 @@ import Icon from "../components/Icon.astro";
 					class="relative mx-auto text-center text-[38px] lg:text-[60px] font-[700] text-[#F5F5F5] leading-[120%] mb-[20px]"
 				>
 					<span class="text-[#F5F5F5]/60">Hacemos tu trabajo</span>
-					<span class="terciary-text-gradient">más simple</span>
+					<span class="terciary-text-gradient negative-scroll inline-block translate-y-[40px]"
+						>más simple</span
+					>
 				</h2>
-				<!-- <p class="text-[18px] text-[#F5F5F5]/80 max-w-[900px] mx-auto text-center">Finding the correct web developer for your agency can be a... thats why we focus on giving our clients the best service</p> -->
 				<!-- Main grid -->
 				<div class="relative grid lg:grid-cols-2 gap-[10px] mt-[60px]">
 					<!-- Sub grid -->
@@ -399,7 +415,7 @@ import Icon from "../components/Icon.astro";
 			<Servicios />
 		</section>
 		<section
-			class="group relative xl:px-0 px-4 py-[80px] bg-[#151718] overflow-hidden have-mouse-follower"
+			class="group max-w-[1200px] mx-auto rounded-[10px] relative xl:px-0 px-4 py-[80px] bg-[#151718] overflow-hidden have-mouse-follower"
 		>
 			<div id="follower"></div>
 			<div
@@ -511,7 +527,7 @@ import Icon from "../components/Icon.astro";
 
 	openContactButtons.forEach((openContactButton) => {
 		openContactButton.addEventListener("click", () => {
-			setTimeout(() => contactScreen.classList.remove("hidden"), 1500)
+			setTimeout(() => contactScreen.classList.remove("hidden"), 1500);
 		});
 	});
 	closeContact.addEventListener("click", () => {
@@ -533,16 +549,28 @@ import Icon from "../components/Icon.astro";
 		});
 	});
 
+	// Negative scroll
+	window.addEventListener("scroll", function () {
+		const scrollY = window.scrollY;
+		const span = document.querySelector(".negative-scroll");
+
+		// Ajusta el valor multiplicador para controlar la velocidad del movimiento
+		const translateValue = scrollY * -0.3 + 120;
+
+		console.log(translateValue)
+
+		span.style.transform = `translateY(${translateValue}px)`;
+	});
+
 	// Confetti buttons
 	const confettiButtons = document.querySelectorAll("#openContact");
 	[...confettiButtons].map((btn) => {
 		btn.addEventListener("click", () => {
-
 			const rect = btn.getBoundingClientRect();
 			let x = rect.left + rect.width / 2;
 			let y = rect.top + rect.height / 2;
 
-			if (!btn.classList.contains('--confetti-d')) {
+			if (!btn.classList.contains("--confetti-d")) {
 				confetti({
 					// muestra error pero no proboca ningun error en el sitio (relacionado a typescript)
 					particleCount: 50,
@@ -552,7 +580,7 @@ import Icon from "../components/Icon.astro";
 						y: y / window.innerHeight,
 					},
 					disableForReducedMotion: true,
-					zIndex: 39
+					zIndex: 39,
 				});
 			} else {
 				y = y - 10;
@@ -566,7 +594,7 @@ import Icon from "../components/Icon.astro";
 					angle: -90,
 					disableForReducedMotion: true,
 					zIndex: 39,
-					startVelocity: 30
+					startVelocity: 30,
 				});
 			}
 		});
